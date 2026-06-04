@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: thelook_raw
+    database: bigquery-public-data # The public source project
+    schema: thelook_ecommerce      # The public dataset name
+    tables:
+      - name: users
+      - name: orders
+      - name: order_items
+      - name: products
+      - name: events
+      - name: distribution_centers

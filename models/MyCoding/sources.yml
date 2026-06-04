@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: my_gcp_data                  # Any internal name you want to give this source
+    project: looker-portfolio          # Your exact BigQuery Project ID
+    dataset: taxi     # The exact name of your dataset in BigQuery
+    tables:
+      - name: tlc_yellow_trips_2018_sample          # The exact name of the table you want to read
+
+  - name: my_gcp_churn                  # Any internal name you want to give this source
+    project: looker-portfolio          # Your exact BigQuery Project ID
+    dataset: Churn_ML     # The exact name of your dataset in BigQuery
+    tables:
+      - name: Churn_Tabla          # The exact name of the table you want to read
