@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: thelook_raw
-    database: bigquery-public-data # The public source project
-    schema: thelook_ecommerce      # The public dataset name
+    database: bigquery-public-data # The public source project in bigquery I am reading from
+    schema: thelook_ecommerce      # The public dataset name where to get data
     tables:
       - name: users
       - name: orders

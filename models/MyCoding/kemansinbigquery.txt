@@ -1,0 +1,15 @@
+
+/*model created in big query and called in dbt*/
+
+CREATE or replace MODEL
+  `looker-portfolio.dbt_rvaleriomartinez.ml_kmeans`
+OPTIONS
+  ( MODEL_TYPE='KMEANS',
+    NUM_CLUSTERS=4,
+    KMEANS_INIT_METHOD='RANDOM') AS
+
+SELECT 
+    total_spend_z_score,
+    recency_min_max_scaled,
+    log_total_spend
+FROM `looker-portfolio.dbt_rvaleriomartinez.ml_features_tb`
