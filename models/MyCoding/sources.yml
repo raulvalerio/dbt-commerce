@@ -1,11 +1,19 @@
 version: 2
 
 sources:
-  - name: my_gcp_data                  # Any internal name you want to give this source
+
+  - name: my_ml_tables                  # Name for this area about ML practice
+    project: looker-portfolio          # Your exact BigQuery Project ID
+    dataset: dbt_rvaleriomartinez     # The exact name of your dataset in BigQuery where to retrieve the data (added in dbt connection)
+    tables:
+      - name: ml_features_tb         # The table generated with customer and orders tables
+      - name: ml_kmeans              # The ML kmeans model created in bigquery
+
+  - name: my_gcp_data                  # Any internal name you want to give this source example taxi data
     project: looker-portfolio          # Your exact BigQuery Project ID
     dataset: taxi     # The exact name of your dataset in BigQuery
     tables:
-      - name: tlc_yellow_trips_2018_sample          # The exact name of the table you want to read
+      - name: tlc_yellow_trips_2018_sample          # The exact name of the table you want to read stored in bigquery
 
   - name: my_gcp_churn                  # Any internal name you want to give this source
     project: looker-portfolio          # Your exact BigQuery Project ID
